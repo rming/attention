@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+
+    "name": "Warning!",
+    "version": "1.0",
+    "background": { "scripts": ["background.js"] },
+    "permissions": ["tabs","http://*/"],
+    "page_action": {
+          "default_icon"  : "warning.png",
+          "default_popup" : "popup.html"
+     },
+    "content_scripts": [
+        {
+          "matches": ["http://*/*"],
+          "js": ["content_scripts.js"]
+        }
+    ]
+}
